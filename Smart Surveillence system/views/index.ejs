@@ -1,0 +1,71 @@
+<% include partials/header %>
+
+
+    <div class="container">
+
+        <header class="jumbotron">
+            <div class="container">
+                <center>
+                    <h1>Welcome To The Smart Surveillance System</h1>
+                </center>
+                 
+                <p></p>
+
+                <p>
+                    <a class="btn btn-primary btn-large" href="/admin/new">CREATE ACCOUNT</a>
+                </p>
+
+                <p>
+                    <a class="btn btn-primary btn-large" href="/admin/search">Search Admin</a>
+                </p>
+
+            </div>
+        </header>
+
+        <!-- <form action="/search" method="POST">
+
+            <input type="text" name="name" placeholder="name">
+            <input type="text" name="batch" placeholder="batch">
+            <input type="text" name="branch" placeholder="branch">
+            <input type="text" name="college" placeholder="college">
+
+            <button> search</button>
+
+        </form> -->
+
+
+
+
+        <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+            <% alumni.forEach(function(alumni){ %>
+                <div class="col-md-3 col-sm-6">
+                    <div class="thumbnail">
+                        <img src="<%= alumni.image %>">
+                        <div class="caption">
+                            <h4>
+                                <%= alumni.name %>
+                            </h4>
+                        </div>
+                        <p>
+                            <a href="/admin/<%= alumni._id%>" class="btn btn-primary">More Info</a>
+                        </p>
+                    </div>
+                </div>
+                <% }); %>
+        </div>
+    </div>
+
+    <div id="particles-js">
+
+
+        </br>
+        </br>
+        </br>
+        <div id="abc">
+
+
+        </div>
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script src="/js/script.js"></script>
+
+        <% include partials/footer %>

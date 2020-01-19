@@ -1,0 +1,293 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Varela Round', sans-serif;
+	line-height: 1.6;
+	color: #3a3a3a;
+}
+
+p {
+	font-size: .95em;
+	margin-bottom: 1.8em;
+}
+
+h2,
+h3,
+a {
+	color: #093a58;
+}
+
+h2,
+h3 {
+	margin-top: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+    /*display: none;*/
+}
+
+figure{
+    margin: 0;
+    line-height: 0;
+    position: relative;
+}
+
+figcaption{
+    font-size: .9em;
+    line-height: 1;
+    color: #fff;
+    padding: 1em;
+    background: rgba(19, 43, 102, .85);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    }
+
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+.name {
+	font-size: 1.25em;
+}
+
+.name a,
+.main-nav a {
+	text-align: center;
+}
+
+.main-nav a {
+	font-size: .95em;
+	color: #3acec2;
+	text-transform: uppercase;
+}
+
+.main-nav a:hover {
+	color: #093a58;
+}
+
+/* ---- Layout Containers ---- */
+    
+   .col{
+      padding: 0 1em;
+   }
+
+    .banner {
+        color: #fff;
+        background: #3acec2;
+        padding: 3.2em 0;
+       margin-bottom: 60px;
+    }
+
+    .main-footer {
+        background: #d9e4ea;
+        padding: 2em 0;
+        margin-top: 30px;
+    }
+
+    .main-header{
+        padding-top: .5em;
+    	padding-bottom: .5em;
+    }
+
+    .container{
+            padding: 10px 0;
+        }
+   
+   .banner,
+   .main-footer{
+       text-align: center;
+   }
+/* ---- Page Elements ---- */
+
+.logo {
+	width: 1090px;
+  height: 400px;
+}
+.feat-img {
+	width: 100%;
+}
+.headline{
+    margin-bottom: 0;
+}
+
+/*********************
+Media Query
+*********************/
+
+
+@media (max-width: 768px) {
+
+	.container {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.main-nav li {
+		display: inline-block;
+		margin-left: 5px;
+	}
+
+	.tagline {
+		font-size: 1em;
+	}
+
+    .main-header{
+        text-align: center;
+    }
+        body{
+            padding-top: 103.78px;
+        }
+     .main-header{
+        position: fixed;
+        background: #fff;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, .4);
+        top:0;
+        width: 100%;
+        z-index: 1;
+
+    }
+    figcaption h4{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    }
+    figcaption p{
+        display: none;
+    }
+
+    
+}
+
+
+@media (min-width: 769px) {
+    body{
+        padding-top: 94.78px;
+    }
+
+	.container {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.name,
+	.col {
+		float: left;
+	}
+
+    .main-header{
+        position: fixed;
+        background: #fff;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, .4);
+        top:0;
+        width: 100%;
+        z-index: 1;
+
+    }
+	.primary,
+	.secondary {
+		width: 50%;
+	}
+
+	.main-nav {
+		float: right;
+	}
+
+	.main-nav li {
+		display: inline-block;
+		margin-left: 15px;
+	}
+
+     .main-nav a{
+       display: inline-block;
+       margin: 1em 10px;
+       padding: 0 10px;
+     }
+
+	.tagline {
+		font-size: 1.4em;
+	}
+
+    figcaption{
+        padding-bottom: .3em;
+    }
+
+    figcaption h4{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    }
+  
+
+
+	/* ---- Float clearfix ---- */
+
+	.clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+
+}
+
+
+@media (min-width: 1025px){
+
+    .container{
+        width: 85%;
+        max-width: 1150px;
+        margin: 0 auto;
+            }
+   
+   .name {
+       float: left;
+   }
+   
+   .main-nav{
+       float: right;
+   }
+
+   .main-nav li{
+       float: left;
+   }
+
+   .main-nav a{
+       display: inline-block;
+       margin: 1em 10px;
+       padding: 0 10px;
+   }
+   /************** Columns 3 ***********/
+
+   .col{
+       float: left;
+   }
+
+    .primary{
+        width: 40%;
+    }
+   .secondary,
+   .tertiary{
+       width: 30%;
+       padding-right: 2em;
+   }
+    /**Clear Fix Float**/
+    .clearfix::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}

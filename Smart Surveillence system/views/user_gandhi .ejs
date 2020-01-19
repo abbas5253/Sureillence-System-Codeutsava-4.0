@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Best City Guide</title>
+	 
+	<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+	 
+	
+
+</head>
+<style> 
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Varela Round', sans-serif;
+	line-height: 1.6;
+	color: #3a3a3a;
+}
+
+p {
+	font-size: .95em;
+	margin-bottom: 1.8em;
+}
+
+h2,
+h3,
+a {
+	color: #093a58;
+}
+
+h2,
+h3 {
+	margin-top: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+    /*display: none;*/
+}
+
+figure{
+    margin: 0;
+    line-height: 0;
+    position: relative;
+}
+
+figcaption{
+    font-size: .9em;
+    line-height: 1;
+    color: #fff;
+    padding: 1em;
+    background: rgba(19, 43, 102, .85);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    }
+
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+.name {
+	font-size: 1.25em;
+}
+
+.name a,
+.main-nav a {
+	text-align: center;
+}
+
+.main-nav a {
+	font-size: .95em;
+	color: #3acec2;
+	text-transform: uppercase;
+}
+
+.main-nav a:hover {
+	color: #093a58;
+}
+
+/* ---- Layout Containers ---- */
+    
+   .col{
+      padding: 0 1em;
+   }
+
+    .banner {
+        color: #fff;
+        background: #3acec2;
+        padding: 3.2em 0;
+       margin-bottom: 60px;
+    }
+
+    .main-footer {
+        background: #d9e4ea;
+        padding: 2em 0;
+        margin-top: 30px;
+    }
+
+    .main-header{
+        padding-top: .5em;
+    	padding-bottom: .5em;
+    }
+
+    .container{
+            padding: 10px 0;
+        }
+   
+   .banner,
+   .main-footer{
+       text-align: center;
+   }
+/* ---- Page Elements ---- */
+
+.logo {
+	width: 1090px;
+  height: 400px;
+}
+.feat-img {
+	width: 100%;
+}
+.headline{
+    margin-bottom: 0;
+}
+
+/*********************
+Media Query
+*********************/
+
+
+@media (max-width: 768px) {
+
+	.container {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.main-nav li {
+		display: inline-block;
+		margin-left: 5px;
+	}
+
+	.tagline {
+		font-size: 1em;
+	}
+
+    .main-header{
+        text-align: center;
+    }
+        body{
+            padding-top: 103.78px;
+        }
+     .main-header{
+        position: fixed;
+        background: #fff;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, .4);
+        top:0;
+        width: 100%;
+        z-index: 1;
+
+    }
+    figcaption h4{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    }
+    figcaption p{
+        display: none;
+    }
+
+    
+}
+
+
+@media (min-width: 769px) {
+    body{
+        padding-top: 94.78px;
+    }
+
+	.container {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.name,
+	.col {
+		float: left;
+	}
+
+    .main-header{
+        position: fixed;
+        background: #fff;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, .4);
+        top:0;
+        width: 100%;
+        z-index: 1;
+
+    }
+	.primary,
+	.secondary {
+		width: 50%;
+	}
+
+	.main-nav {
+		float: right;
+	}
+
+	.main-nav li {
+		display: inline-block;
+		margin-left: 15px;
+	}
+
+     .main-nav a{
+       display: inline-block;
+       margin: 1em 10px;
+       padding: 0 10px;
+     }
+
+	.tagline {
+		font-size: 1.4em;
+	}
+
+    figcaption{
+        padding-bottom: .3em;
+    }
+
+    figcaption h4{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    }
+  
+
+
+	/* ---- Float clearfix ---- */
+
+	.clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+
+}
+
+
+@media (min-width: 1025px){
+
+    .container{
+        width: 85%;
+        max-width: 1150px;
+        margin: 0 auto;
+            }
+   
+   .name {
+       float: left;
+   }
+   
+   .main-nav{
+       float: right;
+   }
+
+   .main-nav li{
+       float: left;
+   }
+
+   .main-nav a{
+       display: inline-block;
+       margin: 1em 10px;
+       padding: 0 10px;
+   }
+   /************** Columns 3 ***********/
+
+   .col{
+       float: left;
+   }
+
+    .primary{
+        width: 40%;
+    }
+   .secondary,
+   .tertiary{
+       width: 30%;
+       padding-right: 2em;
+   }
+    /**Clear Fix Float**/
+    .clearfix::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+</style>
+<body>
+	
+	<header class="main-header">
+		<div class="container clearfix">
+			<!-- <h1 class="name"><a href="#">Best City Guide</a></h1> -->
+			<ul class="main-nav">
+			</ul>
+		</div>
+	</header><!--/.main-header-->   
+
+	<div class="banner">
+		<img class="logo" src="https://i.ytimg.com/vi/CgdKJJuVvPg/maxresdefault.jpg" alt="City">
+		<h1 class="headline">Gandhi Udyan</h1>
+	</div><!--/.banner-->
+	
+	<div class="container clearfix">
+		<div class="secondary col">
+			<h2>Welcome!</h2>
+			Gandhi Udyan Park is located in the heart of the Raipur city which extends till the famous Bhagat Singh Chowk. With a lot of natural vegetation spread over the park, the walking area is neatly tiled. There is also a playground where yoga classes are held early in the morning. With a walking area of about 400 meters, it is an excellent place for a morning or evening walk.
+		</div><!--/.secondary-->
+		
+		<div class="primary col">
+		 
+			
+		</div><!--/.primary-->
+		
+		<div class="tertiary col">
+			<h2>Current Details:</h2>
+			<p>Density: 200 people</p>
+			<p>Sex Ratio (M/F): 1.074</p>
+			<p>This place is currently safe to visit</p>
+		</div><!--/.tertiary-->	
+	</div>
+	
+	<footer class="main-footer">
+		<span>&copy;2020 Residents of The Safest City Ever.</span>
+	</footer>
+</body>
+</html>

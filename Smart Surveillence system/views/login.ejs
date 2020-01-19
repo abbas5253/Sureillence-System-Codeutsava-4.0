@@ -1,0 +1,105 @@
+<% include ./partials/header %>
+<style>
+    body{
+    background-image: url("https://images.unsplash.com/photo-1557597774-9d273605dfa9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1488&q=80");
+    height:100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.Login-Page{
+    width:360px;
+    padding: 10% 0 0;
+    margin: auto;
+}
+
+.form{
+    position: relative;
+    z-index: 1;
+    background:rgba(100,100,100,0.5);
+    max-width:360px;
+    margin:0 auto 100px;
+    padding: 45px;
+    text-align:center; 
+}
+
+.form input{
+    font-family: "Roboto",sans-serif;
+    outline: 1;
+    background: #f2f2f2;
+    width: 100%;
+    border:0;
+    margin:0 0 15px;
+    padding: 15px;
+    box-sizing:border-box;
+    font-size: 14px;
+}
+
+.form button{
+    font-family: "Roboto", sans-serif;
+    text-transform: "Uppercase";
+    outline: 0;
+    background:#4CAF50;
+    width: 100%;
+    border:0;
+    padding: 15px;
+    color:#FFFFFF;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.form button:hover,.form button:active{
+    background:#43A047;
+}
+
+.form .message{
+    margin:15px 0 0;
+    color:aliceblue;
+    font-size: 12px;
+}
+
+
+.form .message a{
+    color:#4CAF50;
+    text-decoration: none;
+}
+
+
+.form .register-form{
+    display: none;
+}
+</style>
+
+
+
+<div class="Login-Page">
+    <div class="form">
+
+        <form action="register" method="POST" class="register-form">
+            <input type="text" placeholder="Username"/>
+            <input type="text" placeholder="Password"/>
+            <input type="text" placeholder="Email-id"/>
+            <button>Create</button>
+            <p class="message">Already Registered?<a href="/login">Login</a></p>
+
+        </form>
+        <form action="login" method="POST" class="login-form">
+            <input type="text" name="admin" placeholder="ADMIN/USER"/>
+            <input type="text" name="username" placeholder="Username"/>
+            <input type="password" name="password" placeholder="Password"/>
+            <button>Login</button>
+            <p class="message">Not Registered?<a href="/register">Register</a></p>
+        </form>
+
+    </div>
+    </div>
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+
+    <script>
+        $('.message a').click(function(){
+            $('form').animate({height:"toggle",opacity:"toggle"},"slow");
+        });
+    </script>
+</body>
+
+
